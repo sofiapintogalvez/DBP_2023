@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@300;400;500;600;700;800&family=Quicksand&display=swap" rel="stylesheet">
+    <link href="css/form.css" rel="stylesheet">
+    <title>Formulario CV</title>
+</head>
+<body>
+    <h1>FORMULARIO PARA CV</h1>
+    <form action="form.php" method="post">
+        <label>Nombres y Apellidos:</label><br>
+        <input class="cajas" type="text" name="nombre" placeholder="Ingrese su nombre" required><br>
+
+        <label>Fecha de Nacimiento:</label><br>
+        <input class="cajas" type="date" name="fecha" required><br>
+
+        <label>Ocupación:</label><br>
+        <input class="cajas" type="text" name="ocupacion" placeholder="Ingrese su ocupación" required><br>
+
+        <label>Contacto e E-mail:</label><br>
+        <input class="cajas" type="text" name="contacto" placeholder="Ingrese su teléfono e E-mail" required><br>
+
+        <label>Nacionalidad:</label><br>
+        <select class="cajas" name="nacionalidad">
+            <option value="1">Peruano</option>
+            <option value="2">Español</option>
+            <option value="3">Inglés</option>
+            <option value="4">Coreano</option>
+            <option value="5">Chino</option>
+        </select>
+        <br>
+
+        <label>Nivel de Inglés:</label><br>
+        <input class="marcado" type="radio" name="nivel">Básico<br>
+        <input class="marcado" type="radio" name="nivel">Intermedio<br>
+        <input class="marcado" type="radio" name="nivel">Avanzado<br>
+        <input class="marcado" type="radio" name="nivel">Fluido<br>
+
+        <label>Lenguajes de Programación:</label><br>
+        <select class="cajas" name="progamacion" size="3" multiple>
+            <option value="l1">C++</option>
+            <option value="l2">Python</option>
+            <option value="l3">JavaScript</option>
+            <option value="l4">PHP</option>
+            <option value="l5">SQL</option>
+        </select>
+        <br>
+
+        <label>Aptitudes:</label><br>
+        <input class="cajas" list="aptitudes">
+        <datalist id="aptitudes">
+            <option value="Liderazgo"></option>
+            <option value="Resolución de problemas"></option>
+            <option value="Creatividad"></option>
+            <option value="Competencias digitales"></option>
+            <option value="Adaptabilidad"></option>
+        </datalist>
+        <br>
+
+        <label>Habilidades:</label><br>
+        <input class="marcado" type="checkbox" value="habi1">Planificación y organización<br>
+        <input class="marcado" type="checkbox" value="habi2">Comunicación<br>
+        <input class="marcado" type="checkbox" value="habi3">Memoria<br>
+        <input class="marcado" type="checkbox" value="habi4">Lenguaje<br>
+
+        <label>Perfil:</label><br>
+        <textarea name="perfil" placeholder="Ingrese su perfil..." required></textarea>
+        <br>
+        
+        <input type="submit" name="enviar" class="boton" value="Enviar">
+    </form>
+</body>
+</html>
